@@ -225,7 +225,6 @@ export class Game {
          
         });
         
-        const generate = document.getElementById("generate");
         generate.addEventListener("click", () => {
             if(team_1.total_score > team_2.total_score){
                 let verdict = `Team 1 won by ${team_1.total_score - team_2.total_score} runs`;
