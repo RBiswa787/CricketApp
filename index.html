@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>var exports = {};</script>
+    <script type="module" src="gamelogic.js"></script>
+    <title>Cricket App</title>
+</head>
+<body>
+    <!-- <button id="hit1" >Hit 1</button>
+    <button id="hit2">Hit 2</button>
+    <button id="start">Start</button>
+    <div id="time"></div> -->
+    <div class="container-fluid">
+        CRICKET 10
+    </div>
+    <div id = "control-panel" class="container-fluid">
+        <div id="first" class="container">
+            <div id="top" class="container">
+                TEAM 1 SCORE
+            </div>
+            <div id="mid" class="container">
+                <div id="score-1" class="container">
+
+                </div>
+            </div>
+            <div id="bottom" class="container">
+                <button id="hit1" type="button" class="btn btn-success">HIT</button>
+            </div>
+        </div>
+        <div id="second" class="container">
+            <div id="top" class="container">
+                TIMER
+            </div>
+            <div id="mid" class="container">
+                <div id="time" class="container">
+
+                </div>
+            </div>
+            <div id="bottom" class="container">
+                <button id="start" type="button" class="btn btn-warning">START</button>
+            </div>
+        </div>
+        <div id="third" class="container">
+            <div id="top" class="container">
+                TEAM 2 SCORE
+            </div>
+            <div id="mid" class="container">
+                <div id="score-2" class="container">
+
+                </div>
+            </div>
+            <div id="bottom" class="container">
+                <button id="hit2" type="button" class="btn btn-success">HIT</button>
+            </div>
+        </div>
+    </div>
+    <div id="generate-container" class="container-fluid">
+        <button id="generate" type="button" class="btn btn-primary">Generate Result</button>
+    </div>
+    <div id="result" class="container-fluid">
+
+    </div>
+    <div id="scores" class="container-fluid">
+        <div id="team_1" class="container">
+            <table id="table-1" class="table">
+                <thead>
+                    <tr>
+                        <th >Team 1</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Player 1</th>
+                        <td id="1-0-0"></td>
+                        <td id="1-0-1"></td>
+                        <td id="1-0-2"></td>
+                        <td id="1-0-3"></td>
+                        <td id="1-0-4"></td>
+                        <td id="1-0-5"></td>
+                        <td id="1-0-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 2</th>
+                        <td id="1-1-0"></td>
+                        <td id="1-1-1"></td>
+                        <td id="1-1-2"></td>
+                        <td id="1-1-3"></td>
+                        <td id="1-1-4"></td>
+                        <td id="1-1-5"></td>
+                        <td id="1-1-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 3</th>
+                        <td id="1-2-0"></td>
+                        <td id="1-2-1"></td>
+                        <td id="1-2-2"></td>
+                        <td id="1-2-3"></td>
+                        <td id="1-2-4"></td>
+                        <td id="1-2-5"></td>
+                        <td id="1-2-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 4</th>
+                        <td id="1-3-0"></td>
+                        <td id="1-3-1"></td>
+                        <td id="1-3-2"></td>
+                        <td id="1-3-3"></td>
+                        <td id="1-3-4"></td>
+                        <td id="1-3-5"></td>
+                        <td id="1-3-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 5</th>
+                        <td id="1-4-0"></td>
+                        <td id="1-4-1"></td>
+                        <td id="1-4-2"></td>
+                        <td id="1-4-3"></td>
+                        <td id="1-4-4"></td>
+                        <td id="1-4-5"></td>
+                        <td id="1-4-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 6</th>
+                        <td id="1-5-0"></td>
+                        <td id="1-5-1"></td>
+                        <td id="1-5-2"></td>
+                        <td id="1-5-3"></td>
+                        <td id="1-5-4"></td>
+                        <td id="1-5-5"></td>
+                        <td id="1-5-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 7</th>
+                        <td id="1-6-0"></td>
+                        <td id="1-6-1"></td>
+                        <td id="1-6-2"></td>
+                        <td id="1-6-3"></td>
+                        <td id="1-6-4"></td>
+                        <td id="1-6-5"></td>
+                        <td id="1-6-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 8</th>
+                        <td id="1-7-0"></td>
+                        <td id="1-7-1"></td>
+                        <td id="1-7-2"></td>
+                        <td id="1-7-3"></td>
+                        <td id="1-7-4"></td>
+                        <td id="1-7-5"></td>
+                        <td id="1-7-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 9</th>
+                        <td id="1-8-0"></td>
+                        <td id="1-8-1"></td>
+                        <td id="1-8-2"></td>
+                        <td id="1-8-3"></td>
+                        <td id="1-8-4"></td>
+                        <td id="1-8-5"></td>
+                        <td id="1-8-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 10</th>
+                        <td id="1-9-0"></td>
+                        <td id="1-9-1"></td>
+                        <td id="1-9-2"></td>
+                        <td id="1-9-3"></td>
+                        <td id="1-9-4"></td>
+                        <td id="1-9-5"></td>
+                        <td id="1-9-6"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="team_2" class="container">
+            <table id="table-2" class="table">
+                <thead>
+                    <tr>
+                        <th >Team 2</th>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Player 1</th>
+                        <td id="2-0-0"></td>
+                        <td id="2-0-1"></td>
+                        <td id="2-0-2"></td>
+                        <td id="2-0-3"></td>
+                        <td id="2-0-4"></td>
+                        <td id="2-0-5"></td>
+                        <td id="2-0-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 2</th>
+                        <td id="2-1-0"></td>
+                        <td id="2-1-1"></td>
+                        <td id="2-1-2"></td>
+                        <td id="2-1-3"></td>
+                        <td id="2-1-4"></td>
+                        <td id="2-1-5"></td>
+                        <td id="2-1-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 3</th>
+                        <td id="2-2-0"></td>
+                        <td id="2-2-1"></td>
+                        <td id="2-2-2"></td>
+                        <td id="2-2-3"></td>
+                        <td id="2-2-4"></td>
+                        <td id="2-2-5"></td>
+                        <td id="2-2-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 4</th>
+                        <td id="2-3-0"></td>
+                        <td id="2-3-1"></td>
+                        <td id="2-3-2"></td>
+                        <td id="2-3-3"></td>
+                        <td id="2-3-4"></td>
+                        <td id="2-3-5"></td>
+                        <td id="2-3-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 5</th>
+                        <td id="2-4-0"></td>
+                        <td id="2-4-1"></td>
+                        <td id="2-4-2"></td>
+                        <td id="2-4-3"></td>
+                        <td id="2-4-4"></td>
+                        <td id="2-4-5"></td>
+                        <td id="2-4-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 6</th>
+                        <td id="2-5-0"></td>
+                        <td id="2-5-1"></td>
+                        <td id="2-5-2"></td>
+                        <td id="2-5-3"></td>
+                        <td id="2-5-4"></td>
+                        <td id="2-5-5"></td>
+                        <td id="2-5-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 7</th>
+                        <td id="2-6-0"></td>
+                        <td id="2-6-1"></td>
+                        <td id="2-6-2"></td>
+                        <td id="2-6-3"></td>
+                        <td id="2-6-4"></td>
+                        <td id="2-6-5"></td>
+                        <td id="2-6-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 8</th>
+                        <td id="2-7-0"></td>
+                        <td id="2-7-1"></td>
+                        <td id="2-7-2"></td>
+                        <td id="2-7-3"></td>
+                        <td id="2-7-4"></td>
+                        <td id="2-7-5"></td>
+                        <td id="2-7-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 9</th>
+                        <td id="2-8-0"></td>
+                        <td id="2-8-1"></td>
+                        <td id="2-8-2"></td>
+                        <td id="2-8-3"></td>
+                        <td id="2-8-4"></td>
+                        <td id="2-8-5"></td>
+                        <td id="2-8-6"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Player 10</th>
+                        <td id="2-9-0"></td>
+                        <td id="2-9-1"></td>
+                        <td id="2-9-2"></td>
+                        <td id="2-9-3"></td>
+                        <td id="2-9-4"></td>
+                        <td id="2-9-5"></td>
+                        <td id="2-9-6"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
